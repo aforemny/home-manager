@@ -269,6 +269,7 @@ in
         # The configuration expected by the Firefox wrapper.
         fcfg = {
           enableGnomeExtensions = cfg.enableGnomeExtensions;
+          enableTridactylNative = true;
         };
 
         # A bit of hackery to force a config into the wrapper.
