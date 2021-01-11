@@ -200,7 +200,7 @@ let
       ${account.neomutt.extraConfig}
     '' + optionalString (account.signature.showSignature != "none") ''
       set signature = ${pkgs.writeText "signature.txt" account.signature.text}
-    '' + optionalString account.notmuch.enable (notmuchSection account);
+    '';
 
 in {
   options = {
