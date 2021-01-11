@@ -35,6 +35,7 @@ let
           use_ssl = "${boolStr v.server.ssl.enable}";
           ssl_verify = "${boolStr v.server.ssl.verify}";
           autoconnect = "${boolStr v.server.autoConnect}";
+          password = "${v.server.password}";
         }
       ''));
 
@@ -124,6 +125,11 @@ let
           type = types.bool;
           default = false;
           description = "Whether Irssi connects to the server on launch.";
+        };
+
+        password = mkOption {
+          type = types.str;
+          description = "TODO";
         };
       };
 
